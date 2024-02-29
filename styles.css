@@ -173,6 +173,44 @@ footer p {
     opacity: 1.0;
 }
 
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.signup-form fieldset label {
+    margin: 10px;
+}
+
+.signup-form fieldset input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.signup-form a {
+    color: #4CAF50;
+}
+
+.signup-form button {
+    background-color: #4CAF50;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+.signup-form button:hover {
+    background-color: #45a049;
+    opacity: 1.0;
+}
+
 @media (max-width: 600px) {
     .product {
         width: calc(100% - 10px);
