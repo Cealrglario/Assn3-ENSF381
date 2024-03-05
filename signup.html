@@ -29,13 +29,25 @@
         <form class="signup-form">
             <fieldset>
                 <legend>Sign Up</legend>
-                <label for="username">Username:</label><br>
+                <label for="username">Username</label><br>
                 <input type="text" id="username" name="username" placeholder="Type in your username" required="true"><br>
-                <label for="password">Password:</label><br>
+                <ul style="list-style-type:circle; font-size: .85em;">
+                    <li>Must be between 3 and 20 characters long</li>
+                    <li>Must start with a letter</li>
+                    <li>Must have no spaces</li>
+                    <li>No special characters other than _ and -</li>
+                </ul>
+                <label for="password">Password</label><br>
                 <input type="password" id="password" name="password" placeholder="Type in your password" required="true"><br>
-                <label for="confirm-password">Confirm Password:</label><br>
+                <ul style="list-style-type:circle; font-size: .85em;">
+                    <li>Must be at least 8 characters long.</li>
+                    <li>Must contain at least one upper and lowercase letter</li>
+                    <li>Must contain one number and one special character.</li>
+                    <li>Must have no spaces</li>
+                </ul>
+                <label for="confirm-password">Confirm Password</label><br>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Retype your password" required="true"><br>
-                <label for="email">Email:</label><br>
+                <label for="email">Email</label><br>
                 <input type="email" id="email" name="email" placeholder="Type in your email" required="true"><br>
             </fieldset>
             <br>
@@ -43,7 +55,44 @@
             <br>Already have an account?
             <a href="login.html">Login here!</a>
 
-            <!-- TO DO: Formatting requirements for username, email, and password -->
+            <!-- TO DO: Formatting requirements for username, email, and password !-->
+            <script>
+            document.querySelector('.signup-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form from submitting
+
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                var confirm_password = document.getElementById('confirm-password').value;
+                var email = document.getElementById('email').value;
+
+                // Regular expression for username validation
+                var user_valid = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/;
+                var pass_valid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/`~])[^\s]{8,}$/;
+                var email_valid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                if (!user_valid.test(username)) {
+                    alert('Invalid username. Must be between 3 and 20 characters long, start with a letter, and can only contain alphanumeric characters, hyphens, and underscores.');
+                }
+
+                else if (!pass_valid.test(password)) {
+                    alert('Invalid password. Must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
+                }
+
+                else if (password != confirm_password) {
+                    alert('Passwords do not match.');
+                } 
+
+                else if (!email_valid.test(email)) {
+                    alert('Invalid email.');
+                }
+                
+                else {
+                    alert('Account created successfully!');
+                    event.target.submit();
+                    window.location.href = "login.html";
+                }
+            });
+            </script>
 
         </form>
     </main>

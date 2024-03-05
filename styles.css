@@ -183,12 +183,23 @@ footer p {
     border-radius: 10px;
 }
 
+.signup-form fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .signup-form fieldset label {
-    margin: 10px;
+    margin-top: 10px;
+}
+
+.signup-form fieldset ul li {
+    display: flex;   
+    margin: 3px;
+    width: 300px;
 }
 
 .signup-form fieldset input {
-    margin: 10px;
     padding: 10px;
     border-radius: 5px;
 }
