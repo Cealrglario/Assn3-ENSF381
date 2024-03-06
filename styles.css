@@ -22,9 +22,20 @@ header {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: #ddd;
+    background-color: #333;
     padding: 10px 20px 10px 20px;
     box-sizing: border-box;
+}
+
+.navigation a {
+    color: white;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.navigation a:hover {
+    color: coral;
+    opacity: 1.0;
 }
 
 .about-us {
@@ -109,8 +120,12 @@ footer p {
     border-radius: 10px;
 }
 
+.product p {
+    color: blue;
+}
+
 .product:hover {
-    background-color: lavender;
+    background-color: white;
 }
 
 .product-list {
@@ -132,7 +147,12 @@ footer p {
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
+    opacity: 0.5;
+}
 
+.product button:hover {
+    background-color: #45a049;
+    opacity: 1.0;
 }
 
 .login-form {
