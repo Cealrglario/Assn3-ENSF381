@@ -15,43 +15,44 @@ Submission  : March 11, 2024
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THIRTEEN</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="thirteen.ico" type="image/gif" >
+    <link rel="icon" href="thirteen.ico" type="image/gif">
+    <script src="login.js"></script>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="logo.png" alt="Company Logo" width = 500>
-        </div>
-        <div class="company-name">
-            THIRTEEN
-        </div>
-    </header>
-    <br>
-    <div class="navigation">
-        <a href="index.html">Home</a> 
-        <a href="products.html">Products</a> 
-        <a href="contact.html">Contact</a> 
-        <a href="login.html">Login</a>
+<header>
+    <div>
+        <img src="logo.png" alt="Company Logo" width="500">
     </div>
-    <br>
-    <main>
-        <form class="login-form">
-            <fieldset>
-                <legend>Sign In</legend>
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" placeholder="Type in your username"><br>
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password" placeholder="Type in your password"><br>
-            </fieldset>
-            <br>
-            <button>Login</button>
-            <br>Don't have an account?
-            <a href="signup.html">Register here!</a>
-        </form>
-
-    </main>
-    <footer>
-        <p>&copy; 2024 THIRTEEN. All rights reserved.</p>
-    </footer>
+    <div class="company-name">
+        THIRTEEN
+    </div>
+</header>
+<br>
+<div class="navigation">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+</div>
+<br>
+<main>
+    <form class="login-form">
+        <fieldset>
+            <legend>Sign In</legend>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="Type in your username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Type in your password" required><br>
+        </fieldset>
+        <br>
+        <button type="submit">Login</button>
+        <br>Don't have an account?
+        <a href="signup.html">Register here!</a>
+    </form>
+    <div id="message-box" class="message-box" style="display: none;"></div>
+</main>
+<footer>
+    <p>&copy; 2024 THIRTEEN. All rights reserved.</p>
+</footer>
 </body>
 </html>
